@@ -3,53 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Website Template</title>
-
-
-    <!--Draft-->
-    <style>  
-        /* styles */ 
-        /* Base styles */
+    <title>Al Manamah Adv. Gifts Tr. LLC</title>
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            background-color: #f5f5f5;
         }
         
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            overflow: hidden;
         }
         
-        /* Header */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+        /* Navigation */
+        .navbar {
+            background-color: #1a3664;
+            padding: 15px 0;
         }
         
-        nav {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
         }
         
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #4a6cf7;
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            background-color: #888;
+            border-radius: 50%;
+            margin-left: 15px;
         }
         
         .nav-links {
@@ -58,242 +48,148 @@
         }
         
         .nav-links li {
-            margin-left: 30px;
+            margin: 0 5px;
         }
         
         .nav-links a {
+            display: block;
+            padding: 8px 20px;
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #4a6cf7;
-        }
-        
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 150px 0 100px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #1e293b;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #4a6cf7;
             color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 500;
+            background-color: #2a4980;
+            border-radius: 3px;
+            text-align: center;
             transition: background-color 0.3s;
         }
         
-        .btn:hover {
-            background-color: #3452d9;
+        .nav-links a:hover {
+            background-color: #3a5a90;
         }
         
-        /* Features Section */
-        .features {
-            padding: 100px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #1e293b;
-        }
-        
-        .section-title p {
-            color: #64748b;
-            max-width: 600px;
-            margin: 20px auto 0;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        
-        .feature-card {
-            background-color: #f8fafc;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            color: #4a6cf7;
-            margin-bottom: 20px;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #1e293b;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 100px 0;
-            background-color: #f8fafc;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+        /* Main Content */
+        .hero {
+            position: relative;
+            height: 300px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
             align-items: center;
+            background-image: url('/api/placeholder/1200/300');
+            background-size: cover;
+            background-position: center;
         }
         
-        .about-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        .gift-image {
+            width: 80%;
+            max-width: 400px;
         }
         
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #1e293b;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            color: #64748b;
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            padding: 100px 0;
-        }
-        
-        .testimonial-slider {
-            margin-top: 50px;
-        }
-        
-        .testimonial-card {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        /* Company Info Section */
+        .company-info {
+            background-color: #1a3664;
+            color: white;
+            padding: 30px 20px 60px;
             text-align: center;
+        }
+        
+        .company-name {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #8ba3c9;
+        }
+        
+        .company-tagline {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        
+        .company-description {
             max-width: 800px;
             margin: 0 auto;
-        }
-        
-        .testimonial-text {
+            line-height: 1.6;
             font-size: 1.1rem;
-            font-style: italic;
-            color: #64748b;
-            margin-bottom: 20px;
         }
         
-        .testimonial-author {
+        /* Products Section */
+        .products {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .products h2 {
+            margin-bottom: 30px;
+            color: #1a3664;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: #eee;
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-title {
+            margin-bottom: 10px;
+            color: #1a3664;
+        }
+        
+        .product-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .product-price {
             font-weight: bold;
-            color: #1e293b;
-        }
-        
-        .testimonial-role {
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 100px 0;
-            background-color: #f8fafc;
-        }
-        
-        .contact-form {
-            max-width: 600px;
-            margin: 40px auto 0;
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #1e293b;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #e2e8f0;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            height: 150px;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #4a6cf7;
+            color: #1a3664;
+            font-size: 1.2rem;
         }
         
         /* Footer */
         footer {
-            background-color: #1e293b;
-            color: #fff;
-            padding: 60px 0 30px;
+            background-color: #1a3664;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
         }
         
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 15px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: #8ba3c9;
         }
         
         .footer-links {
@@ -305,262 +201,235 @@
         }
         
         .footer-links a {
+            color: white;
             text-decoration: none;
-            color: #cbd5e1;
-            transition: color 0.3s;
         }
         
         .footer-links a:hover {
-            color: #fff;
+            text-decoration: underline;
         }
         
-        .social-links {
-            display: flex;
-            gap: 15px;
+        .contact-info p {
+            margin-bottom: 10px;
         }
         
-        .social-links a {
-            color: #cbd5e1;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: #fff;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #334155;
-            color: #cbd5e1;
-            font-size: 0.9rem;
+        .copyright {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #2a4980;
         }
         
         /* Responsive Styles */
         @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
+            .nav-links a {
+                padding: 8px 12px;
+                font-size: 0.9rem;
             }
             
+            .company-name {
+                font-size: 2rem;
+            }
+            
+            .company-tagline {
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
             .nav-links {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background-color: #fff;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-                transform: translateY(-150%);
-                transition: transform 0.3s;
-            }
-            
-            .nav-links.active {
-                transform: translateY(0);
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
             .nav-links li {
-                margin: 15px 0;
+                margin: 5px;
             }
             
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-image {
-                order: 2;
-            }
-            
-            .about-text {
-                order: 1;
+            .footer-section {
+                flex-basis: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Company</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="menu-toggle">☰</div>
-            </nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container container">
+            <div class="logo-circle"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    </nav>
+    
+    <!-- Hero Section with Gift Image -->
+    <section id="home" class="hero">
+        <img src="image1.png" alt="Corporate Gift Package" class="gift-image">
+    </section>
+    
+    <!-- Company Information -->
+    <section id="about" class="company-info">
         <div class="container">
-            <h1>Welcome to Our Modern Website</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-            <a href="#contact" class="btn">Get Started</a>
+            <h1 class="company-name">Al Manamah Adv. Gifts Tr. LLC</h1>
+            <h2 class="company-tagline">Customized Corporate Gifts</h2>
+            <p class="company-description">
+                We specialize in creating premium customized corporate gifts that leave a lasting impression. 
+                From elegant stationery to personalized gift packages, our products help businesses strengthen 
+                their relationships with clients and employees. With attention to detail and commitment to quality, 
+                we deliver gifts that represent your brand's values and enhance your corporate image.
+            </p>
         </div>
     </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
+    
+    <!-- Products Section -->
+    <section id="products" class="products">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Key Features</h2>
-                <p>Discover why clients choose our services</p>
-            </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">★</div>
-                    <h3>Feature One</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">★</div>
-                    <h3>Feature Two</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">★</div>
-                    <h3>Feature Three</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="/api/placeholder/600/400" alt="About Us">
-                </div>
-                <div class="about-text">
-                    <h2>About Our Company</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#contact" class="btn">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our Clients Say</h2>
-                <p>Feedback from our valued customers</p>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem ipsum dolor sit amet."</p>
-                    <div class="testimonial-author">John Doe</div>
-                    <div class="testimonial-role">CEO, Company ABC</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Reach out to us for more information</p>
-            </div>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" required>
+            <h2>Our Premium Gift Collections</h2>
+            <p>Discover our range of customizable corporate gifts for any occasion</p>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/250/200" alt="Executive Stationery Set">
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" required>
+                    <div class="product-info">
+                        <h3 class="product-title">Executive Stationery Set</h3>
+                        <p class="product-description">Premium personalized stationery for your executive team</p>
+                        <p class="product-price">From $49.99</p>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject">
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/250/200" alt="Custom Gift Baskets">
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" required></textarea>
+                    <div class="product-info">
+                        <h3 class="product-title">Custom Gift Baskets</h3>
+                        <p class="product-description">Curated gift baskets with your branding</p>
+                        <p class="product-price">From $79.99</p>
                     </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/250/200" alt="Luxury Pen Sets">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Luxury Pen Sets</h3>
+                        <p class="product-description">Elegant writing instruments with custom engraving</p>
+                        <p class="product-price">From $34.99</p>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/250/200" alt="Corporate Awards">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Corporate Awards</h3>
+                        <p class="product-description">Recognition awards for employee achievements</p>
+                        <p class="product-price">From $89.99</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
+    
+    <!-- Services Section -->
+    <section id="services" class="company-info" style="background-color: #2a4980;">
+        <div class="container">
+            <h2 class="company-tagline">Our Services</h2>
+            <p class="company-description">
+                We offer end-to-end corporate gifting solutions including custom design, branding, 
+                packaging, and international delivery. Our team works closely with you to understand 
+                your requirements and create gifts that align with your brand identity and budget. 
+                Whether you need gifts for a special event, holiday season, or employee recognition, 
+                we provide personalized service every step of the way.
+            </p>
+        </div>
+    </section>
+    
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Mobile Apps</a></li>
-                        <li><a href="#">UI/UX Design</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Get in Touch</h3>
-                    <p>Email: info@company.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
-                    <p>Address: 123 Street Name, City, Country</p>
-                    <div class="social-links">
-                        <a href="#">F</a>
-                        <a href="#">T</a>
-                        <a href="#">I</a>
-                        <a href="#">L</a>
-                    </div>
-                </div>
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Company. All Rights Reserved.</p>
+            
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Corporate Gifts</a></li>
+                    <li><a href="#">Custom Stationery</a></li>
+                    <li><a href="#">Awards & Recognition</a></li>
+                    <li><a href="#">Gift Baskets</a></li>
+                </ul>
             </div>
+            
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: info@almanamahgifts.com</p>
+                <p>Phone: +971 50 123 4567</p>
+                <p>Address: Business Bay, Dubai, UAE</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Al Manamah Adv. Gifts Tr. LLC. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector('.nav-links').classList.remove('active');
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        // JavaScript for interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
+            });
+            
+            // Add animation to product cards when they come into view
+            const productCards = document.querySelectorAll('.product-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            productCards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
             });
         });
     </script>
